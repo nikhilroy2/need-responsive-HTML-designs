@@ -20,7 +20,7 @@
 <body>
     <header>
         <!--Navbar -->
-        <nav class="navbar navbar-expand lighten-1 py-0 m-0">
+        <nav class="navbar navbar-expand bg-light lighten-1 py-0 m-0">
             <a class="navbar-brand text-muted" href="#">Company Logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555"
@@ -102,10 +102,10 @@
         </nav>
         <!--/.Navbar -->
         <!-- Menu -->
-        <menu class="p-0 m-0 text-light">
+        <menu class="m-0 text-light">
             <div class="d-flex align-items-center">
-                <button class="btn btn-dark mr-3"> <i class="fas fa-bars    "></i> </button>  Add Vehicles
-                <div class="text-right flex-grow-1 pr-3">
+                Add Vehicles
+                <div class="text-right flex-grow-1">
                     <a class="text-light px-2 " href="#"> <i class="fas fa-home    "></i> </a> /
                     <a class="text-light px-2 " href="#"> Vehicles </a> /
                     <a class="text-light px-2 " href="#"> Add Vehicles </a>
@@ -113,29 +113,30 @@
             </div>
         </menu>
         <!-- Menu End -->
-       
-    </header>
-
-
-    <main class="d-flex position-relative">
-         <!-- Aside -->
-         <aside class="aside_size bg-dark position-absolute ">
+        <!-- Aside -->
+        <aside class="aside_size bg-dark aside_size_hide" data-js-call="aside_toggle">
             <ul class="list-group  accordion text-light" id="aside_accordion">
-                <li class="list-group-item m-0 p-0 border-0 border-bottom-0 accordion-item "><button
-                        class="accordion-button collapsed text-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#aside_collapse_one" aria-expanded="false" aria-controls="aside_collapse_one">
-                        <i class="fas fa-home mr-3   "></i> Dashboard</button>
-                    <div id="aside_collapse_one" class="accordion-collapse collapse show"
+                <li class="list-group-item m-0 p-0 border-0">
+                    <button class="btn btn-dark btn-lg" style="width: 100px;" onclick="toggleAside(this)"> <i class="fas fa-bars    "></i>
+                    </button>
+                </li>
+                <li class="list-group-item m-0 p-0 py-3 border-0 border-bottom-0 accordion-item "><button
+                        class="accordion-button collapsed size_button text-light" type="button"
+                        data-mdb-toggle="collapse" data-mdb-target="#aside_collapse_one" aria-expanded="false"
+                        aria-controls="aside_collapse_one">
+                        <i class="fas fa-home mr-3   "></i> <span class="aside_item">Dashboard</span></button>
+                    <div id="aside_collapse_one" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingOne" data-mdb-parent="#aside_accordion">
                         <div class="accordion-body">
                             Anim pariatur cliche reprehenderit,
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item m-0 p-0 border-0 border-bottom-0 accordion-item"><button
-                        class="accordion-button collapsed text-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#aside_collapse_two" aria-expanded="false"
-                        aria-controls="aside_collapse_two"><i class="fas fa-car mr-3"></i> Vehicles</button>
+                <li class="list-group-item m-0 p-0 py-3 border-0 border-bottom-0 accordion-item"><button
+                        class="accordion-button collapsed size_button text-light" type="button"
+                        data-mdb-toggle="collapse" data-mdb-target="#aside_collapse_two" aria-expanded="false"
+                        aria-controls="aside_collapse_two"><i class="fas fa-car mr-3"></i> <span
+                            class="aside_item">Vehicles</span></button>
                     <div id="aside_collapse_two" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-mdb-parent="#aside_accordion">
                         <div class="accordion-body">
@@ -143,11 +144,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item m-0 p-0 border-0 border-bottom-0 accordion-item"><button
-                        class="accordion-button collapsed text-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#aside_collapse_three" aria-expanded="false"
+                <li class="list-group-item m-0 p-0 py-3 border-0 border-bottom-0 accordion-item"><button
+                        class="accordion-button collapsed size_button text-light" type="button"
+                        data-mdb-toggle="collapse" data-mdb-target="#aside_collapse_three" aria-expanded="false"
                         aria-controls="aside_collapse_three"><i class="fas fa-exchange-alt mr-3   "></i>
-                        Employee</button>
+                        <span class="aside_item">Employee</span></button>
                     <div id="aside_collapse_three" class="accordion-collapse collapse"
                         aria-labelledby="flush-headingOne" data-mdb-parent="#aside_accordion">
                         <div class="accordion-body">
@@ -155,10 +156,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item m-0 p-0 border-0 border-bottom-0 accordion-item"><button
-                        class="accordion-button collapsed text-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#aside_collapse_four" aria-expanded="false"
-                        aria-controls="aside_collapse_four"> <i class="fas fa-suitcase mr-3   "></i> Trips</button>
+                <li class="list-group-item m-0 p-0 py-3 border-0 border-bottom-0 accordion-item"><button
+                        class="accordion-button collapsed size_button text-light" type="button"
+                        data-mdb-toggle="collapse" data-mdb-target="#aside_collapse_four" aria-expanded="false"
+                        aria-controls="aside_collapse_four"> <i class="fas fa-suitcase mr-3   "></i> <span
+                            class="aside_item">Trips</span></button>
                     <div id="aside_collapse_four" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-mdb-parent="#aside_accordion">
                         <div class="accordion-body">
@@ -166,10 +168,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item m-0 p-0 border-0 border-bottom-0 accordion-item"><button
-                        class="accordion-button collapsed text-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#aside_colapse_five" aria-expanded="false" aria-controls="aside_colapse_five">
-                        <i class="fas fa-table mr-3    "></i> Expenses</button>
+                <li class="list-group-item m-0 p-0 py-3 border-0 border-bottom-0 accordion-item"><button
+                        class="accordion-button collapsed size_button text-light" type="button"
+                        data-mdb-toggle="collapse" data-mdb-target="#aside_colapse_five" aria-expanded="false"
+                        aria-controls="aside_colapse_five">
+                        <i class="fas fa-table mr-3    "></i> <span class="aside_item">Expenses</span></button>
                     <div id="aside_colapse_five" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-mdb-parent="#aside_accordion">
                         <div class="accordion-body">
@@ -177,10 +180,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item m-0 p-0 border-0 border-bottom-0 accordion-item"><button
-                        class="accordion-button collapsed text-light" type="button" data-mdb-toggle="collapse"
-                        data-mdb-target="#aside_colapse_six" aria-expanded="false" aria-controls="aside_colapse_six"><i
-                            class="fas fa-map-marker-alt mr-3"></i> Balance Sheet</button>
+                <li class="list-group-item m-0 p-0 py-3 border-0 border-bottom-0 accordion-item"><button
+                        class="accordion-button collapsed size_button text-light" type="button"
+                        data-mdb-toggle="collapse" data-mdb-target="#aside_colapse_six" aria-expanded="false"
+                        aria-controls="aside_colapse_six"><i class="fas fa-map-marker-alt mr-3"></i> <span
+                            class="aside_item">Balance Sheet</span></button>
                     <div id="aside_colapse_six" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                         data-mdb-parent="#aside_accordion">
                         <div class="accordion-body">
@@ -191,28 +195,207 @@
             </ul>
         </aside>
         <!-- Aside End -->
+
+    </header>
+
+
+    <main class="position-relative">
+
         <div class="section_wrapper flex-grow-1">
-            <div class="wrapper_inner">
-               <div class="inner_head shadow-sm">
-                <div class="d-flex">
-                    <div class="col">
-                        <button class="btn btn-light shadow-none">Vehicle ID</button>
-                        <button class="btn btn-muted shadow">
-                            Auto generates
-                        </button>
+            <div class="wrapper_inner shadow-lg rounded-lg p-3">
+                <div class="inner_head bg-dark p-3  shadow-sm">
+                    <div class="d-flex flex-wrap">
+                        <div class="col flex-grow-1 pl-0">
+                            <button class="btn m-1 btn-white btn-light shadow-none">Vehicle ID</button>
+                            <button class="btn m-1 btn-white btn-muted shadow">
+                                Auto generates
+                            </button>
+                        </div>
+                        <div class="text-right">
+                            <a href="#" class="btn btn-sm text-light shadow-sm">
+                                <i class="fas fa-download    "></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="col flex-grow-1 text-right">
-                        <a href="#" class="btn btn-muted shadow-sm">
-                            <i class="fas fa-download    "></i>
-                        </a>
+                    <div class="d-flex justify-content-between mt-1 flex-wrap">
+                        <button class="btn m-1 flex-grow-1 shadow-sm btn-success py-3 mr-2">Vehicle Details</button>
+                        <button class="btn m-1 flex-grow-1 shadow-sm btn-light py-3 mr-2">EMI Details</button>
+                        <button class="btn m-1 flex-grow-1 shadow-sm btn-light py-3">Documents</button>
                     </div>
+
+
                 </div>
-                <div class="d-flex justify-content-between mt-1">
-                    <button class="btn flex-grow-1 shadow-sm btn-success py-3 mr-2">Vehicle Details</button>
-                    <button class="btn flex-grow-1 shadow-sm btn-muted py-3 mr-2">EMI Details</button>
-                    <button class="btn flex-grow-1 shadow-sm btn-muted py-3">Documents</button>
-                </div>
-               </div>
+                <!-- Section Start Here -->
+                <section id="section_details" class="py-4">
+                    <div class="row justify-content-center">
+                        <div class="col col-10">
+                            <!-- Horizontal material form -->
+                            <form class="">
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputEmail3MD" class="col-sm-3 col-form-label">Vehicle Registration
+                                        Name *</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <select name=""
+                                                class="browser-default custom-select border-0 outline-0 shadow-sm"
+                                                id="">
+                                                <option value="" disabled selected>Please Select vahicle Type
+                                                </option>
+                                                <option value="">Rem eius sapiente vero aspernatur.</option>
+                                                <option value="">Dolor ut esse odit sed.</option>
+                                                <option value="">Necessitatibus voluptatem odit consequuntur iusto!
+                                                </option>
+                                                <option value="">Id culpa earum commodi modi.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Vehicle Number
+                                        *</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <input type="text" placeholder="Enter Number"
+                                                class="form-control border-0 outline-0 shadow-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputEmail3MD" class="col-sm-3 col-form-label">Vehicle Type
+                                        *</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <select name=""
+                                                class="browser-default custom-select border-0 outline-0 shadow-sm"
+                                                id="">
+                                                <option value="" disabled selected>Please select vahicle type
+                                                </option>
+                                                <option value="">Rem eius sapiente vero aspernatur.</option>
+                                                <option value="">Dolor ut esse odit sed.</option>
+                                                <option value="">Necessitatibus voluptatem odit consequuntur iusto!
+                                                </option>
+                                                <option value="">Id culpa earum commodi modi.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Vehicle
+                                        Model</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <input type="text" placeholder="Enter vehicle model"
+                                                class="form-control border-0 outline-0 shadow-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Vehicle Model
+                                        Year</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <input type="number" placeholder="Enter vehicle model year"
+                                                class="form-control border-0 outline-0 shadow-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Fuel Type</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <input type="text" placeholder="Enter fuel type"
+                                                class="form-control border-0 outline-0 shadow-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Purchase
+                                        Date</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <input type="date" class="form-control border-0 outline-0 shadow-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Vehicle Image
+                                    </label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <input type="file" class="form-control border-0 outline-0 shadow-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Is vehicle on Loan
+                                        *</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <select name="" id="" class="form-control border-0 outline-0 shadow-sm">
+                                                <option value="">True</option>
+                                                <option value="">False</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group row">
+                                    <!-- Material input -->
+                                    <label for="inputPassword3MD" class="col-sm-3 col-form-label">Notes</label>
+                                    <div class="col-sm-9">
+                                        <div class="md-form mt-0">
+                                            <textarea name="" id="" placeholder="Enter Notes..." style="height: 100px"
+                                                class="w-100 shadow-sm border-0 outline-0 form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                                <div class="form-group text-center pt-4">
+                                    <button class="btn m-1 btn-danger">Cancel</button>
+                                    <button class="btn m-1 btn-warning">Clear</button>
+                                    <button class="btn m-1 btn-success">Next</button>
+                                </div>
+                                <!-- Grid row -->
+
+                            </form>
+                            <!-- Horizontal material form -->
+                        </div>
+                    </div>
+                </section>
+                <!-- Section Start Here End -->
             </div>
         </div>
     </main>
@@ -231,7 +414,10 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="./vendor/mdb/js/mdb.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        
+    </script>
 </body>
 
 </html>

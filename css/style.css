@@ -2,12 +2,20 @@ a, a:hover {
   text-decoration: none;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10000;
+}
+
 header nav .user_avatar {
   width: 45px;
   height: 45px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   header nav .user_avatar {
     width: 30px;
     height: 30px;
@@ -37,14 +45,65 @@ header nav form.search_form i {
 
 header menu {
   background: #34495E;
+  padding: 15px 48px 15px 110px;
 }
 
-main aside.aside_size {
-  width: 300px;
+@media (max-width: 767px) {
+  header menu {
+    padding: 15px 15px 10px 110px;
+  }
+}
+
+header aside {
+  position: fixed;
+  top: 66px;
+  left: 0;
+}
+
+@media (max-width: 767px) {
+  header aside {
+    top: 46px;
+  }
+}
+
+header aside.aside_size {
   height: 100vh;
+  width: 300px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
-main aside li, main aside li:focus, main aside button:focus, main aside button {
+header aside.aside_size.aside_size_hide {
+  width: 100px;
+}
+
+header aside.aside_size.aside_size_hide .size_button {
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  -ms-flex-wrap: wrap !important;
+      flex-wrap: wrap !important;
+}
+
+header aside.aside_size.aside_size_hide .size_button i {
+  display: block;
+  width: 100%;
+  margin-right: 0 !important;
+}
+
+header aside.aside_size.aside_size_hide .size_button::after {
+  display: none;
+}
+
+header aside.aside_size.aside_size_hide .size_button .aside_item {
+  font-size: 14px;
+  display: inline-block;
+  line-height: 30px;
+}
+
+header aside li, header aside li:focus, header aside button:focus, header aside button {
   border: none !important;
   outline: none !important;
   -webkit-box-shadow: none !important;
@@ -52,10 +111,25 @@ main aside li, main aside li:focus, main aside button:focus, main aside button {
   background: transparent !important;
 }
 
+main {
+  margin-top: 120px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  main {
+    margin-top: 100px;
+  }
+}
+
 main .section_wrapper {
-  border: solid red;
-  height: 100vh;
-  margin-left: 300px;
+  margin-left: 100px;
   padding: 35px 55px;
+}
+
+@media (max-width: 767px) {
+  main .section_wrapper {
+    padding: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

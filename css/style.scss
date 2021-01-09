@@ -39,9 +39,13 @@ header{
     menu{
         background: #34495E;
     }
+    
+}
+main{
     aside{
         &.aside_size{
-            width: 300px
+            width: 300px;
+            height: 100vh;
         }
         li, button{
             border: none!important;

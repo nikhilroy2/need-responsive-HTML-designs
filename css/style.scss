@@ -42,6 +42,7 @@ header{
     
 }
 main{
+    $aside_width: 300px;
     aside{
         &.aside_size{
             width: 300px;
@@ -56,6 +57,12 @@ main{
                 @extend li;
             }
         }
+    }
+    .section_wrapper{
+        border: solid red;
+        height: 100vh;
+        margin-left: $aside_width;
+        padding: 35px 55px;
     }
 }
 

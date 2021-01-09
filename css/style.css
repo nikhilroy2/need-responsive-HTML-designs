@@ -51,4 +51,11 @@ main aside li, main aside li:focus, main aside button:focus, main aside button {
           box-shadow: none !important;
   background: transparent !important;
 }
+
+main .section_wrapper {
+  border: solid red;
+  height: 100vh;
+  margin-left: 300px;
+  padding: 35px 55px;
+}
 /*# sourceMappingURL=style.css.map */

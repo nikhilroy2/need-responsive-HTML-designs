@@ -1,0 +1,53 @@
+a, a:hover {
+  text-decoration: none;
+}
+
+header nav .user_avatar {
+  width: 45px;
+  height: 45px;
+}
+
+@media (max-width: 600px) {
+  header nav .user_avatar {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+header nav form.search_form {
+  position: relative;
+  border-radius: 55px;
+  overflow: hidden;
+}
+
+header nav form.search_form input, header nav form.search_form input:focus {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+header nav form.search_form i {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 10px;
+}
+
+header menu {
+  background: #34495E;
+}
+
+header aside.aside_size {
+  width: 300px;
+}
+
+header aside li, header aside li:focus, header aside button:focus, header aside button {
+  border: none !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  background: transparent !important;
+}
+/*# sourceMappingURL=style.css.map */

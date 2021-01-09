@@ -1,0 +1,58 @@
+// .............. Global ..............
+a,a:hover{
+    text-decoration: none;
+}
+header{
+    nav{
+        
+        .user_avatar{
+            $s: 45px;
+            width: $s;
+            height: $s;
+            @media (max-width: 600px) {
+                $s: 30px;
+                width: $s;
+                height: $s;
+            }
+        }
+        form.search_form{
+            position: relative;
+            border-radius: 55px;
+            overflow: hidden;
+            input{
+                border: none;
+                outline: none;
+                box-shadow: none;
+                &:focus{
+                    @extend input;
+                }
+            }
+            i{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+            }
+        }
+       
+    }
+    menu{
+        background: #34495E;
+    }
+    aside{
+        &.aside_size{
+            width: 300px
+        }
+        li, button{
+            border: none!important;
+            outline: none!important;
+            box-shadow: none!important;
+            background: transparent!important;
+            &:focus{
+                @extend li;
+            }
+        }
+    }
+}
+
+// .............. Global ..............End
